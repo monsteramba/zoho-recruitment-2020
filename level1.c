@@ -1,3 +1,4 @@
+
 #include <stdio.h>
 #include <string.h>
 #define MAX 100
@@ -11,10 +12,12 @@ int main()
         strcpy(temp, inp_string);
         strcat(temp, inp_string);
         int strIdx = n/2;
-        for (int i=0; i <=n; i++){
-            for (int j=0; j<i; j++)
-                printf("%c",temp[strIdx+j]);
-            printf("\n");
+        for (int i=0; i<n; i++){
+            int lenStr = i+1;
+            int printTabs = n-lenStr;
+            if(lenStr>-1) printf("%*.s", printTabs,"\t");
+            printf("%.*s",lenStr,temp+strIdx);
+            if(i>=0) printf("\n");
         }
     }else{
         printf("/t Even Length String");
