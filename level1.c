@@ -7,7 +7,7 @@ int main()
     fgets(inp_string,MAX,stdin);
     if(strlen(inp_string)%2!=0){
         int n = strlen(inp_string);
-        char temp[2*n + 1];
+        // char temp[2*n + 1];
         // strcpy(temp, inp_string);
         // strcat(temp, inp_string);
         int strIdx = n/2;
